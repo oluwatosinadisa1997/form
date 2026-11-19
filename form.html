@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="form.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+      @theme {
+      --color-lighterGreen: hsl(148, 38%, 91%);
+      --color-mediumGreen: hsl(169, 82%, 27%);
+      --color-Red: hsl(0, 66%, 54%);
+      --color-White: hsl(0, 0%, 100%);
+      --color-mediumGrey: hsl(186, 15%, 59%);
+      --color-Grey: hsl(187, 24%, 22%);
+      --font-karla: "karla", sans-serif;
+      }
+    </style>
+
+</head>
+<body class="bg-lighterGreen flex items-center justify-center w-full min-h-screen">
+  <form class="flex flex-col gap-[5px] bg-white w-[80%] lg:w-xl rounded- p-5 font-karla">
+        <h1 class="text-[30px] text-darkergrey font-semibold font-karla ">Contact Us</h1>
+
+        <div class="lg:flex lg:w-full lg:gap-5">
+
+        <div class="lg:flex lg:flex-col lg:w-1/2">
+        <label class="block"for="firstName">
+          First Name <span>*</span>
+        </label>
+        <input class="border border-darkerGrey block w-full rounded-sm p-3 focus:border-mediumGreen focus:curso-pointer" id="firstName" type="text">
+        </div>
+
+        <div class="lg:flex lg:flex-col lg:w-1/2">
+            <label class="block" for="LastName">
+                Last Name <span>*</span>
+            </label>
+            <input class="border border-darkerGrey block w-full rounded-sm p-3 focus:border-mediumGreen focus:curso-pointer" id="firstName" type="text">
+        </div>
+
+        </div>
+
+         <label  class="block"for="email">
+            Email Address <span>*</span>
+        </label>
+        <input class="border border-darkerGrey block w-full rounded-sm p-3 focus:border-mediumGreen focus:curso-pointer" id="email" type="email">
+
+        <label" for="query">Query Type <span>*</span></label>
+        <div id="query" class="lg:flex lg:w-full lg:justify-between lg:gap-5 w-full ">
+        
+        <div class="lg:w-1/2 border border-darkerGrey px-5 py-3 rounded-md flex items-center gap-4 has-[:checked]:bg-lighterGreen has-[:checked]:border-mediumGrey accent-mediumGreen ">
+        <input id="enquiry" type="radio" name="query">
+        <label" for="enquiry">General Enquiry</label>
+        </div>
+
+        <div class="lg:w-1/2 border border-darkerGrey px-5 py-3 rounded-md flex items-center gap-4 has-[:checked]:bg-lighterGreen has-[:checked]:border-mediumGrey accent-mediumGreen" >
+        <input id="support" type="radio" name="query">
+        <label for="support">Support Request</label>
+        </div>
+        </div>
+
+        <label for="message">Message <span>*</span></label>
+        <textarea class="h-[150px] p-3 rounded-md border border-darkerGrey focus:cursur-pointer-pointer focus:border w-full" name="message" id="message"></textarea>
+
+
+        <div class="py-3 flex items-center gap-5">
+            <input class="checked: bg-mediumGreen" id="consent" type="checkbox">
+            <label class="hover:cursor-pointer" for="consent">I consent to being contacted by the team <span>*</span></label>
+        </div>
+
+
+        <button class="w-full h-[48px] text-white bg-mediumGreen rounded-md" type="submit">Submit</button>
+    </form>
+</body>
+        
